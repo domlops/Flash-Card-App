@@ -82,6 +82,8 @@ def change_card(): #select a new word to show on the card and set the timer to 3
         window.after_cancel(timer)
     except ValueError: #a simple fix so an error doesn't show on the terminal on the first card
         timer = window.after(3000, show_translation)
+    else:
+        timer = window.after(3000, show_translation)
 
 def show_translation(): #"flips" the card showing the translation of the word
     canvas.itemconfig(card, image=back_card_img)
